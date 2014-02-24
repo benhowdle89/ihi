@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="//use.typekit.net/qzb6xrb.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<link rel="stylesheet" href="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>iHi.im - Easy location sharing</title>
+	<meta name="description" content="iHi.im is easy location sharing from your GPS enabled device">
+	<meta name="author" content="Ben Howdle & Jack Smith">
+</head>
+<body>
+<div class="wrap">
+	<div class="header group">
+		<div id="logo">
+			<a href="/">
+				<img src="img/logo.svg" width="32px" height="32px" class="logo-icon" />
+				<h1>iHi</h1>
+			</a>
+		</div>
+		<p class="tagline">Easy location sharing.</p>
+	</div>
+
+	<script>
+		var getLocation = true;
+	</script>
+	<div id="map">
+		<input type="text" id="link" />
+	</div>
+	
+	<div class="button-wrap">
+	<a class="btn foundiconsocial-twitter" id="tweet-loc" href="https://twitter.com/intent/tweet?text=I'm here!&amp;url={{RESULT}}" target="_BLANK">tweet</a>
+	
+	<a class="btn foundicon-mail" id="email-loc" href="mailto: ?subject=iHi&body=I'm here: {{RESULT}}">email</a>
+	</div>
+
+	<div class="share-message group">
+		Hey. Your friend or acquaintance shared their location with you.
+	</div>
+	
+	<div class="button-wrap group">
+		<a class="btn foundicon-location" href="/">share your location</a>
+	</div>
+
+	<footer>
+		<p>Made by <a href="http://benhowdle.im" title="Ben Howdle">Ben Howdle</a> and <a href="http://jacksmith.is" title="Jack Smith">Jack Smith</a>.</p>
+	</footer>
+</div> <!-- wrap -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34277638-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

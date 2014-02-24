@@ -1,0 +1,295 @@
+/* Font to the face */
+
+@font-face {
+  font-family: "GeneralFoundicons";
+  src: url("fonts/general_foundicons.eot");
+  src: url("fonts/general_foundicons.eot?#iefix") format("embedded-opentype"), url("fonts/general_foundicons.woff") format("woff"), url("fonts/general_foundicons.ttf") format("truetype"), url("fonts/general_foundicons.svg#GeneralFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundicon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundicon-"]:before {
+  font-family: "GeneralFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.foundicon-mail:before {
+  content: "\f007";
+  font-size: 0.9em;
+}
+
+.foundicon-paper-clip:before {
+  content: "\f01e";
+  font-size: 0.7em;
+  margin-left: 8px;
+}
+
+.foundicon-checkmark:before {
+  content: "\f005";
+  font-size: 0.7em;
+  margin-left: 8px;
+}
+
+.foundicon-location:before {
+  content: "\f028";
+  font-size: 0.7em;
+}
+
+@font-face {
+  font-family: "SocialFoundicons";
+  src: url("fonts/social_foundicons.eot");
+  src: url("fonts/social_foundicons.eot?#iefix") format("embedded-opentype"), url("fonts/social_foundicons.woff") format("woff"), url("fonts/social_foundicons.ttf") format("truetype"), url("fonts/social_foundicons.svg#SocialFoundicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* global foundicon styles */
+[class*="foundiconsocial-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: inherit;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+[class*="foundiconsocial-"]:before {
+  font-family: "SocialFoundicons";
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.foundiconsocial-twitter:before {
+  content: "\f004";
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	font: inherit;
+	text-decoration: none;
+	color: inherit;
+}
+
+input {
+	font: inherit;
+	border: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+body {
+	background: #f0f0f0;
+	font-size: 20px;
+	font-family: "proxima-nova",sans-serif;
+	padding: 0 25px;
+	color: #6d6d6d;	
+}
+
+.wrap {
+	margin: auto;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+h1 {
+	font-family: "proxima-nova",sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	display: inline;
+	vertical-align: middle;
+	font-size: 40px;
+}
+
+#logo {
+	display: inline-block;
+	float: left;
+	line-height: 80px;
+}
+
+.logo-icon {
+	vertical-align: middle;
+	margin-right: 4px;
+}
+
+
+.tagline {
+	float: right;
+	margin-top: 39px;
+	font-size: 0.8em;
+}
+
+.header {
+	height: 80px;
+}
+
+.header:after {
+	clear:both;
+}
+
+#map {
+	background: #fff;
+	margin: auto;
+	display: inline-block;
+	padding: 8px 5px 2px 5px;
+	margin-bottom: 24px;
+	border-radius: 4px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	position: relative;
+	border-top: 1px solid transparent;
+}
+
+#mapcanvas {
+	margin: auto;
+}
+
+#link {
+	width: 100%;
+	padding: 13px;
+	color: #85c5df;
+	text-align: center;
+}
+
+.btn {
+	background: #85c5df;
+	display: inline-block;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 4px;
+	margin: 0 10px;
+	box-shadow: 0 3px 0 #7ab1c7;
+	margin-bottom: ;
+}
+
+.btn:hover {
+	background: #8fcfe9;
+}
+
+.btn:active {
+	position: relative;
+	top: 3px;
+	box-shadow: none;
+	background: #7ab1c7;
+}
+
+.link-icon {
+	background: #85c5df;
+	width: 34px; 
+	height: 34px;
+	-webkit-border-radius: 17px;
+	-moz-border-radius: 17px;
+	border-radius: 20px;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+	line-height: 34px;
+	position: absolute;
+	bottom: 55px;
+	left: 50%;
+	margin-left: -17px;
+	-webkit-box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 1);
+	box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 1);
+}
+
+.link-icon:hover {
+	background: #8fcfe9;
+}
+
+.foundicon-checkmark.link-icon {
+	background:  #93d277;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	-webkit-transform:rotate(360deg);
+	    -moz-transform:rotate(360deg); 
+	    -o-transform:rotate(360deg);
+}
+
+footer {
+	font-size: 0.8em;
+	margin-top: 40px;
+}
+
+footer a {
+	color: #85C5DF;
+	text-shadow: 0 1px 0 rgba(255,255,255,.7);
+}
+
+.share-message {
+	width: 100%;
+	margin: 10px 0 25px 0;
+}
+
+.group {
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+}
+
+.group:after {
+ content: "";
+ display: table;
+ clear: both;
+}
+
+.foundicon-location:before {
+	margin-bottom: 2px;
+}
+
+/* ===== == = === 21.875em (350px) === = == ===== */
+
+@media only screen and (max-width : 21.875em) {
+
+	.tagline, footer {
+		font-size: 0.7em;
+	}
+	
+	.tagline {
+		margin-top: 41px;
+	}
+
+}
