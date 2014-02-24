@@ -128,7 +128,7 @@
 	};
 
 	var processLinks = function(data) {
-		var link = 'http://' + window.location.host + '/#location?data=' + JSON.stringify({
+		var link = 'http://' + window.location.host + '/#location,data=' + JSON.stringify({
 			longitude: data.longitude,
 			latitude: data.latitude
 		});
