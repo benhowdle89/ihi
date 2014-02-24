@@ -56,7 +56,7 @@
 			}
 
 			function handleNoGeolocation(errorFlag) {
-				var content = (errorFlag) ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.',
+				var content = (errorFlag) ? 'Maybe next time, yeah?' : 'Error: Your browser doesn\'t support geolocation.',
 					options = {
 						map: map,
 						position: new google.maps.LatLng(60, 105),
@@ -77,7 +77,7 @@
 				map;
 			els.content.innerHTML = template();
 
-			document.querySelector('#addMapUser').addEventListener('click', function(e){
+			document.querySelector('#addMapUser').addEventListener('click', function(e) {
 				e.preventDefault();
 				calcRoute();
 			});
@@ -132,7 +132,6 @@
 			longitude: data.longitude,
 			latitude: data.latitude
 		}),
-			link = 'http://google.com',
 			url = "http://api.bit.ly/v3/shorten?login=benhowdle89&apiKey=R_01f556645116f8620103c31e48d7f2a2&longUrl=" + link + "&format=json",
 			xhr = new XMLHttpRequest();
 
