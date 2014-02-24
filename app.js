@@ -131,8 +131,9 @@
 		var link = 'http://' + window.location.host + '/#location?data=' + JSON.stringify({
 			longitude: data.longitude,
 			latitude: data.latitude
-		}),
-			url = "http://api.bit.ly/v3/shorten?login=benhowdle89&apiKey=R_01f556645116f8620103c31e48d7f2a2&longUrl=" + link + "&format=json",
+		});
+
+		var url = "http://api.bit.ly/v3/shorten?login=benhowdle89&apiKey=R_01f556645116f8620103c31e48d7f2a2&longUrl=" + link + "&format=json",
 			xhr = new XMLHttpRequest();
 
 		xhr.open('GET', url);
