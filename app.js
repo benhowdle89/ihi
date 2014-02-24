@@ -73,8 +73,7 @@
 		view: function() {
 
 			var source = document.querySelector('#view-template').innerHTML,
-				template = Handlebars.compile(source),
-				map;
+				template = Handlebars.compile(source);
 			els.content.innerHTML = template();
 
 			document.querySelector('#addMapUser').addEventListener('click', function(e) {
@@ -93,13 +92,13 @@
 					zoom: 15,
 					center: them
 				};
-				map = new google.maps.Map(document.getElementById('map'), mapOptions);
-				var marker = new google.maps.Marker({
+				window.map = new google.maps.Map(document.getElementById('map'), mapOptions);
+				window.marker = new google.maps.Marker({
 					position: them,
-					map: map,
+					map: window.map,
 					title: 'Your friend!'
 				});
-				window.directionsDisplay.setMap(map);
+				window.directionsDisplay.setMap(window.map);
 			}
 
 			function calcRoute() {
@@ -118,6 +117,7 @@
 						window.directionsService.route(request, function(response, status) {
 							if (status == google.maps.DirectionsStatus.OK) {
 								window.directionsDisplay.setDirections(response);
+								window.marker.setMap(null);
 							}
 						});
 					});
