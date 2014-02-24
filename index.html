@@ -1,6 +1,6 @@
 <html>
 <head>
-	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=true"></script>
 	<script type="text/javascript" src="//use.typekit.net/qzb6xrb.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link rel="stylesheet" href="style.css" />
@@ -21,31 +21,63 @@
 		<p class="tagline">Easy location sharing.</p>
 	</div>
 
-	<script>
-		var getLocation = true;
-	</script>
-	<div id="map">
-		<input type="text" id="link" />
-	</div>
-	
-	<div class="button-wrap">
-	<a class="btn foundiconsocial-twitter" id="tweet-loc" href="https://twitter.com/intent/tweet?text=I'm here!&amp;url={{RESULT}}" target="_BLANK">tweet</a>
-	
-	<a class="btn foundicon-mail" id="email-loc" href="mailto: ?subject=iHi&body=I'm here: {{RESULT}}">email</a>
-	</div>
+	<div id="content">
 
-	<div class="share-message group">
-		Hey. Your friend or acquaintance shared their location with you.
-	</div>
-	
-	<div class="button-wrap group">
-		<a class="btn foundicon-location" href="/">share your location</a>
 	</div>
 
 	<footer>
 		<p>Made by <a href="http://benhowdle.im" title="Ben Howdle">Ben Howdle</a> and <a href="http://jacksmith.is" title="Jack Smith">Jack Smith</a>.</p>
 	</footer>
 </div> <!-- wrap -->
+
+<script id="start-template" type="text/x-handlebars-template">
+	<div class="share-message group">
+		Meeting a friend in a new place? A little bit lost?
+	</div>
+	<div class="button-wrap group">
+		<a class="btn foundicon-location" href="#share">share your location with them</a>
+	</div>
+</script>
+
+<script id="share-template" type="text/x-handlebars-template">
+	<div id="map">
+		<div class="loader"></div>
+	</div>
+
+	<div class="sharing-links" hidden>
+		<div class="share-message group">
+			Share your location
+		</div>
+		<input type="text" id="link" />
+		
+		<div class="button-wrap">
+			<a class="btn foundiconsocial-twitter" id="tweet-loc" href="https://twitter.com/intent/tweet?text=I'm here!&amp;url=||RESULT||" target="_BLANK">tweet</a>
+			
+			<a class="btn foundicon-mail" id="email-loc" href="mailto:?subject=iHi&body=I'm here: ||RESULT||">email</a>
+		</div>
+	</div>
+</script>
+
+<script id="view-template" type="text/x-handlebars-template">
+	<div class="share-message group">
+		Hey. Your friend or acquaintance shared their location with you.
+	</div>
+
+	<div class="button-wrap group">
+		<a class="btn foundicon-location" id="addMapUser" href="">route yourself to them</a>
+	</div>
+
+	<div id="map">
+		<div class="loader"></div>
+	</div>
+
+	<div class="button-wrap group">
+		<a class="btn foundicon-location" href="#share">share your location</a>
+	</div>
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.3.0/handlebars.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

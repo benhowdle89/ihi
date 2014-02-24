@@ -84,19 +84,96 @@
   content: "\f004";
 }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    -webkit-transform: scale(1);
+  }
+
+  100% {
+    z-index: 1;
+  }
+}
+@-moz-keyframes expand {
+  0% {
+    -moz-transform: scale(0);
+  }
+
+  50% {
+    -moz-transform: scale(1);
+  }
+
+  100% {
+    z-index: 1;
+  }
+}
+@-o-keyframes expand {
+  0% {
+    -o-transform: scale(0);
+  }
+
+  50% {
+    -o-transform: scale(1);
+  }
+
+  100% {
+    z-index: 1;
+  }
+}
+@keyframes expand {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    z-index: 1;
+  }
+}
+.loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -20px 0 0 -20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6.66667px #141414;
+  width: 40px;
+  height: 40px;
+}
+.loader:before, .loader:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  margin: -21px 0 0 -21px;
+  border-radius: 50%;
+  z-index: 2;
+  width: 42px;
+  height: 42px;
+}
+.loader:before {
+  background-color: #141414;
+  -webkit-animation: expand 1.6s linear infinite both;
+  -moz-animation: expand 1.6s linear infinite both;
+  animation: expand 1.6s linear infinite both;
+}
+.loader:after {
+  background-color: white;
+  -webkit-animation: expand 1.6s linear 0.8s infinite both;
+  -moz-animation: expand 1.6s linear 0.8s infinite both;
+  animation: expand 1.6s linear 0.8s infinite both;
+}
+
+
+* {
 	margin: 0;
 	padding: 0;
 	border: none;
@@ -135,6 +212,10 @@ body {
 	padding-bottom: 30px;
 }
 
+#content {
+
+}
+
 h1 {
 	font-family: "proxima-nova",sans-serif;
 	font-style: normal;
@@ -162,10 +243,6 @@ h1 {
 	font-size: 0.8em;
 }
 
-.header {
-	height: 80px;
-}
-
 .header:after {
 	clear:both;
 }
@@ -180,6 +257,8 @@ h1 {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 	position: relative;
 	border-top: 1px solid transparent;
+	width: 80vw;
+	height: 80vh;
 }
 
 #mapcanvas {
@@ -187,10 +266,12 @@ h1 {
 }
 
 #link {
-	width: 100%;
+	width: 50%;
+	margin: 0 auto 24px 0;
 	padding: 13px;
 	color: #85c5df;
 	text-align: center;
+	display: inline-block;
 }
 
 .btn {
@@ -201,7 +282,7 @@ h1 {
 	border-radius: 4px;
 	margin: 0 10px;
 	box-shadow: 0 3px 0 #7ab1c7;
-	margin-bottom: ;
+	margin-bottom: 24px;
 }
 
 .btn:hover {
@@ -278,6 +359,10 @@ footer a {
 
 .foundicon-location:before {
 	margin-bottom: 2px;
+}
+
+[hidden] {
+	display: none;
 }
 
 /* ===== == = === 21.875em (350px) === = == ===== */
