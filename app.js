@@ -79,6 +79,7 @@
 			document.querySelector('#addMapUser').addEventListener('click', function(e) {
 				e.preventDefault();
 				calcRoute();
+				this.setAttribute('hidden', true);
 			});
 
 			var path = window.location.hash.slice(1),
