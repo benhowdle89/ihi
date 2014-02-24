@@ -82,7 +82,8 @@
 			});
 
 			var path = window.location.hash.slice(1),
-				data = JSON.parse(path.split('=')[1]);
+				data = JSON.parse(decodeURIComponent(path.split('=')[1]));
+
 			window.directionsService = new google.maps.DirectionsService();
 
 			function initialize() {
