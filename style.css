@@ -377,4 +377,11 @@ footer a {
 		margin-top: 41px;
 	}
 
+	#map {
+		max-height: 480px;
+	}
+
+	#link {
+		width: 80%;
+	}
 }
