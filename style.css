@@ -185,7 +185,6 @@
 
 a {
 	font: inherit;
-	text-decoration: none;
 	color: inherit;
 }
 
@@ -229,6 +228,10 @@ h1 {
 	display: inline-block;
 	float: left;
 	line-height: 80px;
+}
+
+#logo a {
+	text-decoration: none;
 }
 
 .logo-icon {
@@ -283,6 +286,7 @@ h1 {
 	margin: 0 10px;
 	box-shadow: 0 3px 0 #7ab1c7;
 	margin-bottom: 24px;
+	text-decoration: none;
 }
 
 .btn:hover {
@@ -294,6 +298,10 @@ h1 {
 	top: 3px;
 	box-shadow: none;
 	background: #7ab1c7;
+}
+
+.open-in-app a {
+	font-size: 0.7em;
 }
 
 .link-icon {
@@ -384,4 +392,10 @@ footer a {
 	#link {
 		width: 80%;
 	}
+
+	.app-btn-group span {
+		display: block;
+		margin-bottom: 24px;
+	}
+
 }

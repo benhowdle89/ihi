@@ -85,6 +85,16 @@
 			var path = window.location.hash.slice(1),
 				data = JSON.parse(decodeURIComponent(path.split('=')[1]));
 
+			var openInAppBtn = document.querySelector('#open-in-app');
+			openInAppBtn.href = "ihi://?lat=" + data.latitude + "&long=" + data.longitude;
+
+			var isSafari = /Safari/.test(navigator.userAgent);
+			var isTouch = 'ontouchstart' in window || 'msmaxtouchpoints' in window.navigator;
+
+			if(isSafari && isTouch){
+				openInAppBtn.parentNode.removeAttribute("hidden");
+			}
+
 			window.directionsService = new google.maps.DirectionsService();
 
 			function initialize() {
